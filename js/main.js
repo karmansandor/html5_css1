@@ -7,3 +7,18 @@ function _q( selector ) {
     return elements;
     
 }
+
+
+//Profile beviteli mező megjelenítése
+function showProfile() {
+    
+    // elem kiválasztása
+    var div = document.querySelector(".profile-div");
+    
+    //ha a show class hozzá van adva az elemhez, különben megjelenítjük
+    if ( div.classList.contains("show") ) {
+        div.classList.remove("show");
+    } else {
+    div.classList.add("show");
+    }
+} 

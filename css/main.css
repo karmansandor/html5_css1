@@ -1,12 +1,39 @@
-p.sub-lead {
-    text-decoration: underline;
-    font-weight: 700;
+/* Facebook gomb */
+.btn-facebook {
+    border: none;
+    background-color: #3A5795;
+    color: #f0f0f0;
+    box-shadow: 0 0 3px #777777;
+    border-radius: 2px;
     transition: all 0.5s;
 }
-p.sub-lead:hover {
-    text-decoration: underline;
-    font-weight: 700;
+.btn-facebook:hover {
+    box-shadow: 0 0 8px #777777;
 }
-a:visited {
-    color: aqua;
+
+/* Profil div */
+.profile-div {
+    position: fixed;
+    left: -100%;
+    opacity: 0;
+    /* transition: all 0.5s; */
+}.profile-div.show {
+    position: relative;
+    animation-name: facebook;
+    animation-duration: 0.5s;
+    left: 0;
+    opacity: 1;
+}
+.profile-div form {
+    width: 50%;
+    margin: 10px auto;
+}
+
+/* Keyframes */
+@keyframes facebook {
+    0%  {opacity: 0; left: -100%;}
+    25% {opacity: 0; left: -75%;}
+    50% {opacity: 0; left: -50%;}
+    75% {opacity: 0; left: -25%;}
+    100% {opacity: 1; left: 0;}
 }
