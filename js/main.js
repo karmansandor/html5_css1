@@ -23,6 +23,15 @@ function showProfile() {
     }
 }
 
+
+// Késleltetett megjelenítés
+setTimeout(function () {
+    $("#myModal").modal("show");
+}, 5000 );
+
+//Popover beállítása
+$('#popover1').popover();
+
 // a folyamat állása
 function changeProgress( progress ) {
     
