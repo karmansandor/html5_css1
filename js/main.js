@@ -21,4 +21,23 @@ function showProfile() {
     } else {
     div.classList.add("show");
     }
-} 
+}
+
+// a folyamat állása
+function changeProgress( progress ) {
+    
+    if ( !progress) {
+        progress = document.querySelector( ".progress-value" ).value;
+    }
+    
+    //Reguláris kifejezéssel eltávolítjuk vagy átalakítjuk a hibás karaktereket
+    progress = progress.replace(/[^0-9\.]/g, ""); 
+    progress = progress.replace(/,/g, ".");
+    
+    progress = parseFloat(progress);
+    if (!progress || isNaN(progress))
+        return;
+    
+  var bar = document.querySelector( ".progress .progress-bar");
+    bar.style.width =progress + "%";
+}
